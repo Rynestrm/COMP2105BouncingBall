@@ -1,0 +1,178 @@
+.block {
+   height: 30px;
+   width: 10px;
+   background-color: #000;
+   position: absolute;
+   top: 555px;
+   left: 1235px;
+   animation-name: tip;
+   animation-duration: 7s;
+   animation-fill-mode: forwards;
+}
+.ball {
+   height: 50px;
+   width: 50px;
+   background-color: saddlebrown;
+   border-radius: 50px;
+   animation-name: move, bounce;
+   animation-duration: 7s;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+   position: absolute;
+   top: 85px;
+   left: 5;
+}
+.shadow {
+   height: 1px;
+   width: 50px;
+   background-color: black;
+   animation-name: move, shadowSize;
+   animation-duration: 7s;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+   position: absolute;
+   top: 585px;
+   left: 5;
+}
+/* controls the bouncing */
+@keyframes bounce {
+   0% {
+      transform: translateY(0px) scale(1, 1);
+   }
+   15% {
+      transform: translateY(445px) scale(1, 1);
+   }
+   /* bounce and distort*/
+   16% {
+      transform: translateY(459px) scale(1.2, 0.8);
+   }
+   17% {
+      transform: translateY(445px) scale(0.9, 1.1);
+   }
+   /* peak start */
+   28% {
+      transform: translateY(110px) scale(1, 1);
+   }
+   29% {
+      transform: translateY(115px) scale(1, 1);
+   }
+   42% {
+      transform: translateY(445px) scale(1, 1);
+   }
+   /* bounce and distort */
+   43% {
+      transform: translateY(459px) scale(1, 0.9);
+   }
+   44% {
+      transform: translateY(445px) scale(0.9, 1);
+   }
+   /* peak start */
+   50% {
+      transform: translateY(295px) scale(1, 1);
+   }
+   51% {
+      transform: translateY(300px) scale(1, 1);
+   }
+   /* landing and rolling*/
+   60% {
+      transform: translateY(450px) scale(1, 1);
+   }
+   62% {
+      transform: translateY(430px) scale(1, 1);
+   }
+   64% {
+      transform: translateY(450px) scale(1, 1);
+   }
+   66% {
+      transform: translateY(440px) scale(1, 1);
+   }
+   67% {
+      transform: translateY(450px) scale(1, 1);
+   }
+   100% {
+      transform: translateY(450px) scale(1, 1);
+   }
+}
+/* controls left/right movement */
+@keyframes move {
+   0% {
+      left: 0;
+   }
+   80% {
+      left: 1200px;
+   }
+   /* roll back */
+   85% {
+      left: 1150px;
+   }
+   90% {
+      left: 1110px;
+   }
+   95% {
+      left: 1070px;
+   }
+   100% {
+      left: 1065px;
+   }
+}
+/* controls size of the shadow */
+@keyframes shadowSize {
+   0% {
+      width: 10px;
+   }
+   16% {
+      width: 50px;
+   }
+   29% {
+      width: 10px;
+   }
+   43% {
+      width: 50px;
+   }
+   51% {
+      width: 20px;
+   }
+   60% {
+      width: 50px;
+   }
+   62% {
+      width: 30px;
+   }
+   64% {
+      width: 50px;
+   }
+   66% {
+      width: 40px;
+   }
+   67% {
+      width: 50px;
+   }
+   100% {
+      width: 50px;
+   }
+}
+/* controls the block tip at the end */
+@keyframes tip {
+   0% {
+      transform: rotate(0deg);
+   }
+   79% {
+      left: 1235px;
+      transform: rotate(0deg);
+   }
+   80% {
+      left: 1240px;
+      transform: rotate(60deg);
+      transform-origin: bottom right;
+   }
+   85% {
+      left: 1245px;
+      transform: rotate(90deg);
+      transform-origin: bottom right;
+   }
+   100% {
+      left: 1245px;
+      transform: rotate(90deg);
+      transform-origin: bottom right;
+   }
+}
