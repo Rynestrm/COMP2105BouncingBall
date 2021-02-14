@@ -6,8 +6,8 @@
    width: 10px;
    background-color: #000;
    position: absolute;
-   top: 82.5%;
-   left: 1235px;
+   top: 550px;
+   left: 84.4%;
    animation-name: tip;
    animation-duration: 7s;
    animation-fill-mode: forwards;
@@ -40,6 +40,7 @@
    left: 5;
 }
 /* controls the bouncing */
+/* used pixels to see work with animations and pixels */
 @keyframes bounce {
    0% {
       transform: translateY(0px) scale(1, 1);
@@ -99,6 +100,7 @@
    }
 }
 /* controls left/right movement */
+/* used % to play with animations and % */
 @keyframes move {
    0% {
       left: 0;
@@ -159,24 +161,25 @@
 /* controls the block tip at the end */
 @keyframes tip {
    0% {
+      left: 84.4%;
       transform: rotate(0deg);
    }
    79% {
-      left: 1235px;
+      left: 84.4%;
       transform: rotate(0deg);
    }
    80% {
-      left: 1240px;
+      left: 85%;
       transform: rotate(60deg);
       transform-origin: bottom right;
    }
    85% {
-      left: 1245px;
+      left: 85%;
       transform: rotate(90deg);
       transform-origin: bottom right;
    }
    100% {
-      left: 1245px;
+      left: 85%;
       transform: rotate(90deg);
       transform-origin: bottom right;
    }
