@@ -1,9 +1,12 @@
+* {
+   box-sizing: border-box;
+}
 .block {
    height: 30px;
    width: 10px;
    background-color: #000;
    position: absolute;
-   top: 555px;
+   top: 82.5%;
    left: 1235px;
    animation-name: tip;
    animation-duration: 7s;
@@ -12,7 +15,8 @@
 .ball {
    height: 50px;
    width: 50px;
-   background-color: saddlebrown;
+   border: 3px solid #1310da;
+   background-color: #d80c0c;
    border-radius: 50px;
    animation-name: move, bounce;
    animation-duration: 7s;
@@ -23,9 +27,10 @@
    left: 5;
 }
 .shadow {
-   height: 1px;
+   height: 3px;
    width: 50px;
-   background-color: black;
+   border-radius: 50px;
+   background: radial-gradient(#000, #fff);
    animation-name: move, shadowSize;
    animation-duration: 7s;
    animation-timing-function: linear;
@@ -99,20 +104,20 @@
       left: 0;
    }
    80% {
-      left: 1200px;
+      left: 81%;
    }
    /* roll back */
    85% {
-      left: 1150px;
+      left: 79%;
    }
    90% {
-      left: 1110px;
+      left: 77%;
    }
    95% {
-      left: 1070px;
+      left: 76%;
    }
    100% {
-      left: 1065px;
+      left: 75%;
    }
 }
 /* controls size of the shadow */
